@@ -2,16 +2,16 @@ pipeline{
     agent any
     parameters{
         choice(name: 'action', choices: ['build', 'destroy'], description: 'Build Or Destroy Infrastructure')
-        sting(name: 'environment', defaultValue: 'default', description: 'Environment name')
-        sting(name: 'team', defaultValue: 'default', description: 'Team name')
-        sting(name: 'account', defaultValue: 'default', description: 'account name')
-        sting(name: 'region', defaultValue: 'us-east-1', description: 'region')
-        sting(name: 'cidr', defaultValue: '', description: 'vpc cidr')
-        sting(name: 'public_cidr', defaultValue: '', description: 'public cidrs')
-        sting(name: 'private_cidr', defaultValue: '', description: 'private cidrs')
-        sting(name: 'desired', defaultValue: '', description: 'node group desired')
-        sting(name: 'max', defaultValue: '', description: 'node group max capacity')
-        sting(name: 'min', defaultValue: '', description: 'node group min capacity')
+        string(name: 'environment', defaultValue: 'default', description: 'Environment name')
+        string(name: 'team', defaultValue: 'default', description: 'Team name')
+        string(name: 'account', defaultValue: 'default', description: 'account name')
+        string(name: 'region', defaultValue: 'us-east-1', description: 'region')
+        string(name: 'cidr', defaultValue: '', description: 'vpc cidr')
+        string(name: 'public_cidr', defaultValue: '', description: 'public cidrs')
+        string(name: 'private_cidr', defaultValue: '', description: 'private cidrs')
+        string(name: 'desired', defaultValue: '', description: 'node group desired')
+        string(name: 'max', defaultValue: '', description: 'node group max capacity')
+        string(name: 'min', defaultValue: '', description: 'node group min capacity')
 
     }
     stages{
