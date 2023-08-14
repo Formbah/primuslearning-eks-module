@@ -20,7 +20,7 @@ pipeline{
             steps{
                 script{
                     sh"ls -l"
-                    sh"cat $WORKSPACE/var/terraform/tfvars"
+                    sh"cat $WORKSPACE/vars/terraform/tfvars"
                 }
             }
 
