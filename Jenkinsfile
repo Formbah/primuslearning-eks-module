@@ -39,7 +39,7 @@ pipeline{
             when { equals expected: 'destroy', actual: params.action }
             steps{
                 script{
-                    withAWS([credentials: "${params.cred}", region "${params.region}"])
+                    withAWS([credentials: "${params.cred}", region: "${params.region}"])
                     sh"ls -l"
                 }
             }
