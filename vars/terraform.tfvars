@@ -1,7 +1,7 @@
 default_tags = {
-  Environment : DEV,
-  Team : TEAM
-  Account : ACCOUNT,
+  Environment : "DEV",
+  Team : "TEAM"
+  Account : "ACCOUNT",
 }
 
 aws_region = "REGION"
