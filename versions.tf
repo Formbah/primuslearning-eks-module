@@ -1,4 +1,9 @@
 terraform {
+    backend "s3" {
+      bucket = "myownjenkinsbuckets"
+      key = "terraform.tfvars"
+      region = "REGION"
+    }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
