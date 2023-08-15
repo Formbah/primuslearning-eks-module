@@ -28,7 +28,9 @@ pipeline{
             when { equals expected: 'build', actual: params.action }
             steps{
                 script{
-                    withAWS([credentials: "${params.cred}", region "${params.region}"])
+                    withAWS([credentials: "${params.cred}", region "${params.region}"]){
+                        sh"aws s3 ls"
+                    }
                     
                 }
             }
