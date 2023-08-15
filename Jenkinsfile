@@ -19,7 +19,6 @@ pipeline{
         stage("Init") {
             steps{
                 script{
-                    sh"ls -l"
                     sh"cat $WORKSPACE/vars/terraform/tfvars"
                 }
             }
