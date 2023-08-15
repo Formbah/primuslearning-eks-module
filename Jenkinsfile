@@ -29,7 +29,7 @@ pipeline{
             steps{
                 script{
                     withAWS([credentials: "${params.cred}", region: "${params.region}"]){
-                        sh"terraform init"
+                        sh"terraform init -reconfigure"
                     }
                     
                 }
