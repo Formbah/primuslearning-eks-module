@@ -28,7 +28,7 @@ pipeline{
             when { equals expected: 'build', actual: params.action }
             steps{
                 script{
-                    withAWS([credentials: "${params.creds}", region: "${params.region}"]){
+                    withAWS([credentials: "${params.cred}", region: "${params.region}"]){
                         terraformInit()
                         sh"""
                         terraform plan -no-color -var-file $WORKSPACE/vars/terraform.tfvars
