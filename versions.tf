@@ -1,6 +1,6 @@
 terraform {
     backend "s3" {
-      bucket = "myownjenkinsbucket"
+      bucket = "wowobanana"
       key = "terraform.tfvars"
       region = "REGION"
     }
